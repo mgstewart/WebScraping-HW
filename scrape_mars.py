@@ -7,6 +7,9 @@ import pandas as pd
 
 # Define functions for application
 def scrape():
+    '''The scrape function integrates the individual scraping functions
+    and packages the data into a python dictionary which is returned for
+    a flask endpoint to both upsert and extract from a MongoDB.'''
     title, text = scrape_news()
     featured_image_url = scrape_photo()
     mars_weather = scrape_weather()
